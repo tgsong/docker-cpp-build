@@ -1,8 +1,6 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 RUN apt update && \
-    apt install -y software-properties-common && \
-    add-apt-repository ppa:ubuntu-toolchain-r/test && \
     apt install -y git g++-10 cmake ninja-build python3-pip pkg-config && \
     pip3 install conan && \
     conan profile new --detect default && \
